@@ -5,15 +5,15 @@ rvm:
 - 2.1
 - 2.2
 script:
-  - bundle exec rake spec
-  - bundle exec rake test
+- bundle exec rake spec
+- bundle exec rake test
 before_install:
-  - echo "endpoint: $OSS_ENDPOINT" > ~/.oss.yml
-  - echo "access_key_id: $OSS_ACCESS_KEY_ID" >> ~/.oss.yml
-  - echo "access_key_secret: $OSS_ACCESS_KEY_SECRET" >> ~/.oss.yml
-  - echo "bucket: $OSS_BUCKET" >> ~/.oss.yml
-  - cat ~/.oss.yml
-  - gem install bundler
+- echo "endpoint: $OSS_ENDPOINT" > ~/.oss.yml
+- echo "access_key_id: $OSS_ACCESS_KEY_ID" >> ~/.oss.yml
+- echo "access_key_secret: $OSS_ACCESS_KEY_SECRET" >> ~/.oss.yml
+- echo "bucket: $OSS_BUCKET" >> ~/.oss.yml
+- cat ~/.oss.yml
+- gem install bundler
 env:
   global:
-    secure: sM5fIGv8e508QTWe9YVrtO//GEhlQ4qnmBZnc4dMorr8ESj55y9dulSTpKOaANU2IYt3E1CBE+L1IXV4SZryVX0uht1MK/h7cX+jGNdYpaPIRyFYw7KxM2IRqk29kmZG6P68PG67aNK30scwjPy5maKbtq7PwSv5F05ER9syeAUg+Rjj2176HeYVvytLaTU0SVUnVTSt0X4bHr+NidM8iOHoUObsJu5ZzsHx/i0YCUGtivmpYYDQA7NcgIfVzxbIWXLe77igTT02ENVOoZmXitjz83HL5tlsDOv3F/eShBSCRaDLdh6N+7CilzJIP+0bLOcl4oNTXZa9e55fBKe4lVqAT024eKry52P+8ehAQLzf/3pmvBK2nJq51RY1NiVHdOISsVxtCe645LlIk53Kko/pYMDFPtYXX1rT+EhhRCeM0SdnAyitmOYusdN1HPSFeTJaGPlXIHPZGb3bo0/x4ctUeVrfsCc4I8D0oYTcdcHpHqn1bn9GKxfBkvjvrSqSWl2qLRllj8vlpj+lZzpf9XOqVzbIuHSd7PpYIE4Owu0nnLEE90LRFg8cK6N9J6pQ/Bp5xWiHW4I8Q9b/HBMy7a26V7LysJROI8ACl8ZzItr2EqZA0qeiAehHmyqoUzDB+9nzL+XmW6AEYB57V9uxGeOoAkCCDWWy0674oQzXOjc=
+    secure: UFlLHhAxk1pkntCCAUiYGfLvC0qFkiG8CQfJS75noTQb35g3BlbMDlZ4LnuuYVU4Vm97A9wuADoAVEb33fLrl2Lt18Bwn6PLBJV7TSKoKnUMWrvol+H2aH0Y1lAgTnrjinztHM+F10Nch0vkQLODrdy9n+G2QOwZPKGGD8mTn18WF+b7Q5d0M73SeONImT01UB0qwgISY/SMxkRHdvIVncOAxFR+JZPmRcPDGpTb1rRZm/QQmKCUO+nPJFs2mGqxJhd6lTduQK9BoUr1j69qFaFcJDUKX9Ulo1Tf1ug6WTdvd8v30/h+7wAr+XveQSZrdMiF4+u15d24N237YmQ2dT/Wd2XLnN8y7uc2GejnRBOUQirgFm1t6uLCb1Qc4uNzfTiJA07Yql+nHkIs/M4Yqrv8S8FCG+3tBZPOXaxwKvM6CARutHYh6+MJ+XVAqsSUJP9X5oee0/xYtfYhiXEfxRXq2xr1yXD+RPPkImsOvfoUsZRlrff5dxK8Xqs9LePKHiixLy34SiXeOiFJBor2zkfRNRZKlmJ12RyM4tHRIuzM6W5VHZOwSfz4ulwGyiVWn62qk1uFTH9jKJrSk2gczRTsJUQGGlcESUsV+bamlyxnW3UKmoJ2+jGPRyXQ8Riq4D2xeirTeSiLc9YgF64lo/uaO/qxCCskkO9Qs5HEk78=
