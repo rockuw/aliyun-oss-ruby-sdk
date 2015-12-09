@@ -8,10 +8,10 @@ script:
 - bundle exec rake spec
 - bundle exec rake test
 before_install:
-- echo "endpoint: $OSS_ENDPOINT" > ~/.oss.yml
-- echo "access_key_id: $OSS_ACCESS_KEY_ID" >> ~/.oss.yml
-- echo "access_key_secret: $OSS_ACCESS_KEY_SECRET" >> ~/.oss.yml
-- echo "bucket: $OSS_BUCKET" >> ~/.oss.yml
+- 'echo "endpoint: $OSS_ENDPOINT" > ~/.oss.yml'
+- 'echo "access_key_id: $OSS_ACCESS_KEY_ID" >> ~/.oss.yml'
+- 'echo "access_key_secret: $OSS_ACCESS_KEY_SECRET" >> ~/.oss.yml'
+- 'echo "bucket: $OSS_BUCKET" >> ~/.oss.yml'
 - cat ~/.oss.yml
 - gem install bundler
 env:
