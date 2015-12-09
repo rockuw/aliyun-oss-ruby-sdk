@@ -1,9 +1,19 @@
 language: ruby
 rvm:
-  - 1.9.3
-  - 2.0
-  - 2.1
-  - 2.2
+- 1.9.3
+- 2.0
+- 2.1
+- 2.2
 script:
-  bundle exec rake spec
-before_install: gem install bundler
+  - bundle exec rake spec
+  - bundle exec rake test
+before_install:
+  - echo "endpoint: $OSS_ENDPOINT" > ~/.oss.yml
+  - echo "access_key_id: $OSS_ACCESS_KEY_ID" >> ~/.oss.yml
+  - echo "access_key_secret: $OSS_ACCESS_KEY_SECRET" >> ~/.oss.yml
+  - echo "bucket: $OSS_BUCKET" >> ~/.oss.yml
+  - cat ~/.oss.yml
+  - gem install bundler
+env:
+  global:
+    secure: sM5fIGv8e508QTWe9YVrtO//GEhlQ4qnmBZnc4dMorr8ESj55y9dulSTpKOaANU2IYt3E1CBE+L1IXV4SZryVX0uht1MK/h7cX+jGNdYpaPIRyFYw7KxM2IRqk29kmZG6P68PG67aNK30scwjPy5maKbtq7PwSv5F05ER9syeAUg+Rjj2176HeYVvytLaTU0SVUnVTSt0X4bHr+NidM8iOHoUObsJu5ZzsHx/i0YCUGtivmpYYDQA7NcgIfVzxbIWXLe77igTT02ENVOoZmXitjz83HL5tlsDOv3F/eShBSCRaDLdh6N+7CilzJIP+0bLOcl4oNTXZa9e55fBKe4lVqAT024eKry52P+8ehAQLzf/3pmvBK2nJq51RY1NiVHdOISsVxtCe645LlIk53Kko/pYMDFPtYXX1rT+EhhRCeM0SdnAyitmOYusdN1HPSFeTJaGPlXIHPZGb3bo0/x4ctUeVrfsCc4I8D0oYTcdcHpHqn1bn9GKxfBkvjvrSqSWl2qLRllj8vlpj+lZzpf9XOqVzbIuHSd7PpYIE4Owu0nnLEE90LRFg8cK6N9J6pQ/Bp5xWiHW4I8Q9b/HBMy7a26V7LysJROI8ACl8ZzItr2EqZA0qeiAehHmyqoUzDB+9nzL+XmW6AEYB57V9uxGeOoAkCCDWWy0674oQzXOjc=

@@ -23,6 +23,8 @@ class TestObjectKey < Minitest::Test
   end
 
   def test_large_file_1gb
+    skip "don't run it in regression"
+
     key = get_key("large_file_1gb")
     Benchmark.bm(32) do |bm|
       bm.report("Upload with put_object: ") do
@@ -44,6 +46,8 @@ class TestObjectKey < Minitest::Test
   end
 
   def test_large_file_8gb
+    skip "don't run it in regression"
+
     key = get_key("large_file_8gb")
     Benchmark.bm(32) do |bm|
       bm.report("Upload with put_object: ") do
